@@ -10,7 +10,7 @@ def connect(db_name="news"):
         cursor = db.cursor()
         return db, cursor
     except:
-        print ("Unable to connect to the database")
+        print("Unable to connect to the database")
 
 
 def popular_article():
@@ -27,7 +27,7 @@ def popular_article():
     print "\nWhat are the most popular three articles of all time?\n"
     for i in range(0, len(result), 1):
         print str(i + 1) + ". \"" + result[i][0] + "\" has "\
-         + str(result[i][1]) + " views"
+            + str(result[i][1]) + " views"
 
 
 def popular_authors():
@@ -43,8 +43,8 @@ def popular_authors():
     db.close()
     print "\nWho are the most popular article authors of all time?\n"
     for i in range(0, len(result), 1):
-        print str(i+1)+". \"" + result[i][0] + "\" has "\
-         + str(result[i][1]) + " views"
+        print str(i + 1) + ". \"" + result[i][0] + "\" has "\
+            + str(result[i][1]) + " views"
 
 
 def log_status():
@@ -59,8 +59,9 @@ def log_status():
     db.close()
     print "\nOn which days did more than 1% of requests lead to errors?\n"
     for i in range(0, len(result), 1):
-        print "On "+str(result[i][0]) + " it is found that the error is "\
-         + str(result[i][1])+"%\n"
+        print "On " + str(result[i][0]) + " it is found that the error is "\
+            + str(result[i][1]) + "%\n"
+
 
 if __name__ == '__main__':
 
